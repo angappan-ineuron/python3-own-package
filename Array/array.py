@@ -14,6 +14,7 @@ class List:
                     if data[i] > data[j]:
                         data[i], data[j] = data[j], data[i]
             logging.info(f'Value sorted.')
+            return data
         except Exception as e:
             logging.error(str(e))
 
@@ -22,10 +23,13 @@ class List:
             if type(value) is list or type(value) is dict or type(value) is set:
                 data = data + [[value]]
                 logging.info(f'List appended')
+                return data
             if type(value) is tuple:
                 data = data + ((value))
+                return data
             else:
                 data = data + [value]
+                return data
         except Exception as e:
             logging.error(str(e))
 
@@ -120,6 +124,17 @@ class List:
 
 class Tuple:
 
+    def sort(self, data):
+        try:
+            for i in range(len(data)):
+                for j in range(i+1, len(data)):
+                    if data[i] > data[j]:
+                        data[i], data[j] = data[j], data[i]
+            logging.info(f'Value sorted.')
+            return data
+        except Exception as e:
+            logging.error(str(e))
+
     def max(self, data):
         try:
             max_val = self.sort(data)[-1]
@@ -150,15 +165,18 @@ class Tuple:
 class Dict:
 
     def clear(self, data):
-        data = {}
-        logging.info(f"Data is cleared")
-        return data
+        try:
+            data = {}
+            logging.info(f"Data is cleared")
+            return data
+        except Exception as e:
+            logging.error(str(e))
 
     def get(self, data, key):
-        for k in data.keys():
+        for k, v in data.items():
             if k == key:
-                logging.info(f"Key {k} returned")
-                return k
+                logging.info(f"Value {v} returned")
+                return v
             else:
                 logging.warning(f"Key {k} not found in {data}")
 
@@ -216,16 +234,42 @@ class Dict:
 
 class Set:
 
-    def clear(self, data):
-        data = {}
+    def clear(self):
+        logging.info('Set cleared')
+        return {}
 
     def add(self, data, value):
-        if type(data) is not list or type(data) is not dict or type(data) is not tuple or type(data) is not str:
-            list_data = list(data) + [data]
-            return set(list_data)
+        try:
+            if type(data) is not list or type(data) is not dict or type(data) is not tuple or type(data) is not str:
+                list_data = list(data) + [value]
+                set_data = set(list_data)
+                logging.info(f'Value {value} added in {data} set')
+                return set_data
+        except Exception as e:
+            logging.error(str(e))
 
     def difference(self, a, b):
-        return a - b
+        try:
+            diff = a - b
+            logging.info(f'Differece of {a} and {b} is {diff}')
+            return diff
+        except Exception as e:
+            logging.error(str(e))
+
+    def update(self, data, value):
+        try:
+            if type(data) is not list or type(data) is not dict or type(data) is not tuple or type(data) is not str:
+                list_data = list(data)
+                for i, v in enumerate(list_data):
+                    if v == value:
+                        list_data[i] = value
+                        logging.info(f'Value {value} updated in {data}')
+        except Exception as e:
+            logging.error(str(e))
 
     def copy(self, data):
-        return data
+        try:
+            logging.info(f'Set {data} is copied')
+            return data
+        except Exception as e:
+            logging.error(str(e))

@@ -1,3 +1,23 @@
 2022-01-29 22:37:46 INFO Value [12, 2323] found 0 times
 2022-01-29 22:40:03 INFO Length of [] is 0
 2022-01-29 22:40:03 INFO Value [12, 2323] found 0 times
+2022-01-29 23:19:43 ERROR 'Tuple' object has no attribute 'sort'
+2022-01-29 23:20:47 ERROR 'Tuple' object has no attribute 'sort'
+2022-01-29 23:20:49 ERROR 'Tuple' object has no attribute 'sort'
+2022-01-29 23:21:51 ERROR 'Tuple' object has no attribute 'sort'
+2022-01-29 23:22:36 INFO Value sorted.
+2022-01-29 23:22:36 INFO Value sorted.
+2022-01-29 23:22:36 INFO Max value of (1, 2, 3, 4) is 4
+2022-01-29 23:23:00 INFO Value sorted.
+2022-01-29 23:23:00 INFO Max value of (1, 2, 3, 4) is 4
+2022-01-29 23:24:25 INFO Value sorted.
+2022-01-29 23:24:25 INFO Max value of (1, 2, 3, 4) is 4
+2022-01-29 23:24:50 INFO Value sorted.
+2022-01-29 23:24:50 INFO Max value of (1, 2, 3, 4) is 4
+2022-01-29 23:24:50 INFO Key name returned
+2022-01-29 23:26:20 INFO Value sorted.
+2022-01-29 23:26:20 INFO Max value of (1, 2, 3, 4) is 4
+2022-01-29 23:26:20 INFO Key name returned
+2022-01-29 23:27:35 INFO Value sorted.
+2022-01-29 23:27:35 INFO Max value of (1, 2, 3, 4) is 4
+2022-01-29 23:27:35 INFO Value angappanmuthu returned

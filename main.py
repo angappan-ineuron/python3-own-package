@@ -6,10 +6,25 @@ from Array.array import Dict
 
 from Array.array import Set
 
-d = Dict()
+llist = List()
+ttuple = Tuple()
+ddict = Dict()
+sset = Set()
 
-b = {"key1": "value1", "key2": "value2"}
+a = [1, 2, 3, 4]
 
-# print(d.get(b, "kkk"))
+b = (1, 2, 3, 4)
 
-print(List().count([12, 3], [12, 2323]))
+c = {"name": "angappanmuthu", "class": "mca"}
+
+d = {1, 2, 3, 4}
+
+e = {1, 2, 5, 6}
+
+print(llist.append(a, 5))
+
+print(ttuple.max(b))
+
+print(ddict.get(c, 'name'))
+
+print(sset.difference(d, e))
