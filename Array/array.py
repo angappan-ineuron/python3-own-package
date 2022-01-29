@@ -216,5 +216,16 @@ class Dict:
 
 class Set:
 
-    def pop(self):
-        return
+    def clear(self, data):
+        data = {}
+
+    def add(self, data, value):
+        if type(data) is not list or type(data) is not dict or type(data) is not tuple or type(data) is not str:
+            list_data = list(data) + [data]
+            return set(list_data)
+
+    def difference(self, a, b):
+        return a - b
+
+    def copy(self, data):
+        return data
